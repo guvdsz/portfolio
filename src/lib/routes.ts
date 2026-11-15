@@ -15,3 +15,7 @@ export function requireLocale(value: string): Locale {
 export function notePath(locale: Locale, slug: string): string {
   return notesPaths[locale] + '/' + slug
 }
+
+export function projectPath(locale: Locale, slug: string): string {
+  return homePaths[locale] + '/projects/' + slug
+}

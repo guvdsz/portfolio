@@ -1,5 +1,6 @@
 import type { MetadataRoute } from 'next'
 import { notes, notePaths } from '@/data/notes'
+import { projects, projectPaths } from '@/data/projects'
 import { languageAlternates } from '@/lib/metadata'
 import { homePaths, notesPaths, type LocalizedPaths } from '@/lib/routes'
 import { siteUrl } from '@/lib/site'
@@ -16,5 +17,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...addVersions(homePaths),
     ...addVersions(notesPaths),
     ...notes.flatMap((note) => addVersions(notePaths(note))),
+    ...projects.flatMap((project) => addVersions(projectPaths(project))),
   ]
 }

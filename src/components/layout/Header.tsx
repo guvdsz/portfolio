@@ -2,7 +2,7 @@ import Link from 'next/link'
 import type { Dictionary } from '@/dictionaries/types'
 import type { Locale } from '@/lib/i18n'
 import { homePaths, notesPaths, type LocalizedPaths } from '@/lib/routes'
-import { author } from '@/lib/site'
+import { author, username } from '@/lib/site'
 import { ThemeToggle } from '@/components/ui/ThemeToggle'
 import { LocaleSwitcher } from './LocaleSwitcher'
 
@@ -18,7 +18,11 @@ export function Header({ locale, paths, labels, onNotesIndex }: HeaderProps) {
 
   return (
     <header className="site-header">
-      <Link className="site-name" href={home}>{author}</Link>
+      <Link className="site-name" href={home}>
+        {author}
+        <span className="meta" aria-hidden="true">|</span>
+        <span className="meta">@{username}</span>
+      </Link>
       <div className="header-controls">
         <nav className="primary-nav" aria-label={labels.primary}>
           <Link href={notesPaths[locale]} aria-current={onNotesIndex ? 'page' : undefined}>

@@ -1,9 +1,10 @@
 import 'server-only'
 
 export const author = 'Gustavo Viana'
+export const username = 'guvdsz'
 export const socialLinks = [
-  { label: 'GitHub', href: 'https://github.com/guvdsz' },
-  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/guvdsz/' },
+  { label: 'GitHub', href: 'https://github.com/' + username },
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/' + username + '/' },
 ] as const
 
 const deploymentDomain = process.env.VERCEL_PROJECT_PRODUCTION_URL || process.env.VERCEL_URL

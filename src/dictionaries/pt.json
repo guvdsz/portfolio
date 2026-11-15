@@ -9,6 +9,7 @@
     "skip": "Ir para o conteúdo"
   },
   "home": {
+    "title": "Sobre mim",
     "paragraphs": [
       [
         "Sou desenvolvedor de software do interior da Bahia. Na EloGroup, fui de estagiário em engenharia de software a Forward Deployed Engineer. Trabalhei com JavaScript em sistemas para o setor público, do levantamento de requisitos com clientes à implementação de regras de negócio, integrações e migração de dados."
@@ -23,6 +24,11 @@
       ]
     ],
     "description": "Gustavo Viana, desenvolvedor de software da Bahia. Experiência com sistemas para o setor público e notas técnicas sobre Node.js."
+  },
+  "projects": {
+    "title": "Projetos",
+    "empty": "Estou preparando os projetos que quero compartilhar aqui.",
+    "back": "Voltar aos projetos"
   },
   "notes": {
     "title": "Notas",

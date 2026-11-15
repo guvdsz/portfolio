@@ -11,6 +11,7 @@ export interface Dictionary {
     skip: string
   }
   home: {
+    title: string
     paragraphs: ParagraphPart[][]
     description: string
   }
@@ -18,5 +19,10 @@ export interface Dictionary {
     title: string
     description: string
     all: string
+  }
+  projects: {
+    title: string
+    empty: string
+    back: string
   }
 }
