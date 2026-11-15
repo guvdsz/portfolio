@@ -8,11 +8,11 @@ export function formatDate(locale: Locale, date: string, options: Intl.DateTimeF
   )
 }
 
-export function formatDateRange(locale: Locale, start: string, end: string): [string, string] {
+export function formatDateRange(locale: Locale, start: string, end?: string): [string, string?] {
   const month = { month: 'short' } as const
   const monthYear = { month: 'short', year: 'numeric' } as const
   return [
-    formatDate(locale, start, start.slice(0, 4) === end.slice(0, 4) ? month : monthYear),
-    formatDate(locale, end, monthYear),
+    formatDate(locale, start, start.slice(0, 4) === end?.slice(0, 4) ? month : monthYear),
+    end ? formatDate(locale, end, monthYear) : undefined,
   ]
 }

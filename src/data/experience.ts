@@ -3,7 +3,7 @@ import type { Localized } from '@/lib/i18n'
 
 interface Role {
   start: string
-  end: string
+  end?: string
   copy: Localized<{ title: string; description: string }>
 }
 
@@ -18,7 +18,6 @@ export const experience: readonly Employer[] = [
     roles: [
       {
         start: '2026-10',
-        end: '2026-11',
         copy: {
           pt: {
             title: 'Forward Deployed Engineer',
@@ -102,11 +101,11 @@ export const experience: readonly Employer[] = [
         copy: {
           pt: {
             title: 'Desenvolvedor front-end freelancer, web e mobile',
-            description: 'Implementei fluxos de autenticação, navegação e formulários em uma aplicação React Native e Expo com suporte à web. Integrei a aplicação ao backend e trabalhei em inglês com a equipe da startup canadense.',
+            description: 'Trabalhei no desenvolvimento de um aplicativo web e mobile para uma startup canadense, usando React Native e Expo. Implementei autenticação, navegação e formulários e integrei o app à API do backend. Colaborei remotamente com uma equipe internacional e alinhei as demandas em inglês com o Product Owner.',
           },
           en: {
             title: 'Freelance Front-End Developer, Web and Mobile',
-            description: 'I built authentication flows, navigation, and forms for a React Native and Expo app that also ran on the web. I integrated the app with its backend and worked in English with the Canadian startup’s team.',
+            description: 'I worked on a web and mobile app for a Canadian startup using React Native and Expo. I implemented authentication, navigation, and forms and integrated the app with its backend API. I collaborated remotely with an international team and discussed requirements with the Product Owner in English.',
           },
         },
       },

@@ -28,14 +28,19 @@ export async function generateMetadata({ params }: HomeProps) {
 
 export default async function HomePage({ params }: HomeProps) {
   const locale = requireLocale((await params).locale)
-  const { home, navigation, notes, projects } = await getDictionary(locale)
+  const { experience: experienceLabels, home, navigation, notes, projects } = await getDictionary(locale)
   const recentNotes = listNotes(locale).slice(0, 3)
 
   return (
     <SiteFrame locale={locale} paths={homePaths} labels={navigation}>
       <Intro title={home.title} paragraphs={home.paragraphs} />
       <ProjectSection locale={locale} title={projects.title} emptyMessage={projects.empty} />
-      <Experience employers={experience} locale={locale} heading={navigation.experience} />
+      <Experience
+        employers={experience}
+        locale={locale}
+        heading={experienceLabels.title}
+        currentLabel={experienceLabels.current}
+      />
       {recentNotes.length > 0 && (
         <section className="home-section" aria-labelledby="notes-heading">
           <h2 id="notes-heading">{notes.title}</h2>

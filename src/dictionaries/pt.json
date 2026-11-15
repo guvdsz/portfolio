@@ -1,11 +1,14 @@
 {
   "navigation": {
-    "experience": "Experiência",
     "notes": "Notas",
     "primary": "Navegação principal",
     "language": "Idioma",
     "darkMode": "Tema escuro",
     "skip": "Ir para o conteúdo"
+  },
+  "experience": {
+    "title": "Experiência",
+    "current": "atual"
   },
   "home": {
     "title": "Sobre mim",

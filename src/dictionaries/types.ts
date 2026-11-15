@@ -2,12 +2,15 @@ export type ParagraphPart = string | { text: string; href: string }
 
 export interface Dictionary {
   navigation: {
-    experience: string
     notes: string
     primary: string
     language: string
     darkMode: string
     skip: string
+  }
+  experience: {
+    title: string
+    current: string
   }
   home: {
     title: string

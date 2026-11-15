@@ -1,11 +1,14 @@
 {
   "navigation": {
-    "experience": "Experience",
     "notes": "Notes",
     "primary": "Main navigation",
     "language": "Language",
     "darkMode": "Theme (dark mode)",
     "skip": "Skip to content"
+  },
+  "experience": {
+    "title": "Experience",
+    "current": "Present"
   },
   "home": {
     "title": "About me",

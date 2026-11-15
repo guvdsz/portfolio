@@ -6,9 +6,10 @@ interface ExperienceProps {
   employers: readonly Employer[]
   locale: Locale
   heading: string
+  currentLabel: string
 }
 
-export function Experience({ employers, locale, heading }: ExperienceProps) {
+export function Experience({ employers, locale, heading, currentLabel }: ExperienceProps) {
   return (
     <section id="experience" className="home-section" aria-labelledby="experience-heading">
       <h2 id="experience-heading">{heading}</h2>
@@ -25,7 +26,7 @@ export function Experience({ employers, locale, heading }: ExperienceProps) {
                     <span className="meta role-date">
                       <time dateTime={start}>{startLabel}</time>
                       {' – '}
-                      <time dateTime={end}>{endLabel}</time>
+                      {end ? <time dateTime={end}>{endLabel}</time> : currentLabel}
                     </span>
                   </div>
                   <p>{copy[locale].description}</p>
