@@ -129,6 +129,7 @@ a:focus-visible {
 }
 
 .header-controls {
+  align-items: center;
   gap: 0.5rem 1rem;
 }
 
@@ -151,6 +152,11 @@ a:focus-visible {
 }
 
 .theme-toggle {
+  display: inline-flex;
+  min-width: 1.5rem;
+  min-height: 1.5rem;
+  align-items: center;
+  justify-content: center;
   opacity: 0.7;
   cursor: pointer;
 }
@@ -162,6 +168,14 @@ a:focus-visible {
 
 .theme-toggle:disabled {
   cursor: default;
+}
+
+.theme-toggle-icon {
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  background: linear-gradient(90deg, currentColor 50%, transparent 50%);
 }
 
 .skip-link {
@@ -531,13 +545,29 @@ h4 {
 
 @media (max-width: 36rem) {
   .site-header {
+    flex-wrap: nowrap;
     align-items: center;
-    column-gap: 0.75rem;
+    column-gap: 0.5rem;
+  }
+
+  .site-name {
+    min-inline-size: 0;
+  }
+
+  .site-author {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .site-name .meta {
+    flex-shrink: 0;
   }
 
   .header-controls {
-    align-items: center;
-    column-gap: 0.625rem;
+    flex: none;
+    flex-wrap: nowrap;
+    column-gap: 0.5rem;
   }
 
   .home-section {
@@ -554,6 +584,43 @@ h4 {
 
   .note-list time {
     display: block;
+  }
+}
+
+@media (max-width: 26rem) {
+  .site-header {
+    font-size: 0.75rem;
+  }
+
+  .site-name {
+    gap: 0.25rem;
+  }
+
+  .header-controls {
+    column-gap: 0.375rem;
+  }
+
+  .header-controls a {
+    padding-inline: 0.125rem;
+  }
+
+  .locale-switcher {
+    font-size: inherit;
+  }
+
+  .locale-separator {
+    padding-inline: 0.2rem;
+  }
+}
+
+@media (max-width: 21rem) {
+  .site-header,
+  .header-controls {
+    column-gap: 0.25rem;
+  }
+
+  .locale-separator {
+    padding-inline: 0.125rem;
   }
 }
 

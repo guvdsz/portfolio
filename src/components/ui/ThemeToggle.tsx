@@ -5,11 +5,10 @@ import { flushSync } from 'react-dom'
 import { useIsHydrated } from '@/lib/use-is-hydrated'
 
 export interface ThemeToggleProps {
-  label: string
   darkModeLabel: string
 }
 
-export function ThemeToggle({ label, darkModeLabel }: ThemeToggleProps) {
+export function ThemeToggle({ darkModeLabel }: ThemeToggleProps) {
   const { resolvedTheme, setTheme } = useTheme()
   const hydrated = useIsHydrated()
   const isDark = resolvedTheme === 'dark'
@@ -36,7 +35,7 @@ export function ThemeToggle({ label, darkModeLabel }: ThemeToggleProps) {
       disabled={!hydrated}
       onClick={toggleTheme}
     >
-      {label}
+      <span className="theme-toggle-icon" aria-hidden="true" />
     </button>
   )
 }

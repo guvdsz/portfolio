@@ -19,7 +19,7 @@ export function Header({ locale, paths, labels, onNotesIndex }: HeaderProps) {
   return (
     <header className="site-header">
       <Link className="site-name" href={home}>
-        {author}
+        <span className="site-author">{author}</span>
         <span className="meta" aria-hidden="true">|</span>
         <span className="meta">@{username}</span>
       </Link>
@@ -30,7 +30,7 @@ export function Header({ locale, paths, labels, onNotesIndex }: HeaderProps) {
           </Link>
         </nav>
         <LocaleSwitcher locale={locale} paths={paths} label={labels.language} />
-        <ThemeToggle label={labels.theme} darkModeLabel={labels.darkMode} />
+        <ThemeToggle darkModeLabel={labels.darkMode} />
       </div>
     </header>
   )
