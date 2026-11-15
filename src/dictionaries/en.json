@@ -11,18 +11,18 @@
     "title": "About me",
     "paragraphs": [
       [
-        "I’m a software developer from Bahia, Brazil. At EloGroup, I went from software engineering intern to Forward Deployed Engineer. I worked on JavaScript systems for the public sector, from gathering requirements with clients to implementing business rules, integrating services, and migrating data."
-      ],
-      [
-        "Outside work, I write about what I learn from digging into ",
+        "I’m a software engineer who enjoys working on the backend, especially with JavaScript, TypeScript, and ",
         {
           "text": "Node.js",
           "href": "https://nodejs.org/"
         },
-        ". Lately, I’ve been exploring how data moves through files, streams, and TCP connections."
+        ". I’ve worked on service integrations, business rules, and data migrations for public-sector systems."
+      ],
+      [
+        "I’ve been studying software architecture, design systems, and the internals of JavaScript and Node.js."
       ]
     ],
-    "description": "Gustavo Viana, software developer from Bahia, Brazil. Public-sector software experience and technical notes on Node.js."
+    "description": "Gustavo Viana, a software engineer focused on backend work. Public-sector software experience and technical notes on Node.js."
   },
   "projects": {
     "title": "Projects",

@@ -11,18 +11,18 @@
     "title": "Sobre mim",
     "paragraphs": [
       [
-        "Sou desenvolvedor de software do interior da Bahia. Na EloGroup, fui de estagiário em engenharia de software a Forward Deployed Engineer. Trabalhei com JavaScript em sistemas para o setor público, do levantamento de requisitos com clientes à implementação de regras de negócio, integrações e migração de dados."
-      ],
-      [
-        "Fora do trabalho, escrevo sobre o que descubro estudando ",
+        "Sou engenheiro de software e gosto de trabalhar com backend, especialmente com JavaScript, TypeScript e ",
         {
           "text": "Node.js",
           "href": "https://nodejs.org/"
         },
-        ". Ultimamente, tenho explorado como os dados passam por arquivos, streams e conexões TCP."
+        ". Tenho experiência com integrações, regras de negócio e migração de dados em sistemas para o setor público."
+      ],
+      [
+        "Tenho estudado arquitetura de software, design systems e conceitos de baixo nível em JavaScript e Node.js."
       ]
     ],
-    "description": "Gustavo Viana, desenvolvedor de software da Bahia. Experiência com sistemas para o setor público e notas técnicas sobre Node.js."
+    "description": "Gustavo Viana, engenheiro de software com foco em backend. Experiência com sistemas para o setor público e notas técnicas sobre Node.js."
   },
   "projects": {
     "title": "Projetos",
