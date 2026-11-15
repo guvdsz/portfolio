@@ -1,0 +1,22 @@
+Num estudo com `node:net`, fiz um cliente enviar o nome e o tamanho de um arquivo antes dos bytes do conteúdo. No servidor, o socket podia entregar dados mais rápido do que a stream de escrita conseguia gravá-los. Foi aí que backpressure deixou de ser um detalhe da documentação.
+
+## Da rede para o arquivo
+
+`file.write(chunk)` devolve um booleano. Quando devolve `false`, aquele trecho já foi aceito e a escrita pede que eu aguarde antes de enviar o próximo. Pauso a leitura do socket e a retomo quando o arquivo emite `drain`.
+
+```js
+function writeChunk(socket, file, chunk) {
+  if (!file.write(chunk)) {
+    socket.pause()
+    file.once('drain', () => socket.resume())
+  }
+}
+```
+
+Esse trecho é só o controle de fluxo durante a escrita do corpo. A transferência inteira também precisa tratar erros, encerrar os recursos e conferir se recebeu a quantidade de bytes anunciada.
+
+## O protocolo define os limites
+
+TCP entrega um fluxo de bytes. Um evento `data` pode conter metade do cabeçalho, ou o cabeçalho inteiro e o começo do arquivo. Por isso, o parser precisa guardar o que ainda está incompleto e encaminhar à escrita só o trecho que já pertence ao corpo. Depois de resolver o enquadramento, `pipeline()` é uma opção para deixar o Node coordenar o fluxo e propagar erros entre streams.
+
+[Documentação de streams do Node.js](https://nodejs.org/api/stream.html)

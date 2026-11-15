@@ -1,0 +1,33 @@
+Quando comecei a usar o módulo `fs` no Node.js, passei um tempo tratando a leitura de arquivos como uma operação que sempre devolvia texto. A diferença apareceu quando tirei o argumento `'utf8'` da chamada.
+
+## Bytes primeiro
+
+```js
+import { readFile } from 'node:fs/promises'
+
+const bytes = await readFile('README.md')
+const text = await readFile('README.md', 'utf8')
+```
+
+A primeira leitura devolve um `Buffer`. Ele contém os bytes do arquivo e pode ser passado para código que espera dados binários, como o cálculo de um hash. A segunda leitura interpreta os bytes como UTF-8 e devolve uma string. Quando já tenho o `Buffer`, posso fazer essa conversão depois com `bytes.toString('utf8')`.
+
+## O que muda quando eu abro o arquivo
+
+`fs.promises.open()` devolve um `FileHandle`. Ele encapsula um descritor de arquivo do sistema operacional e me permite fazer operações como ler a partir de uma posição específica. Quando uso a abertura explícita, fecho o recurso ao terminar, mesmo se uma leitura falhar.
+
+```js
+import { open } from 'node:fs/promises'
+
+const file = await open('README.md', 'r')
+try {
+  const buffer = Buffer.alloc(32)
+  const { bytesRead } = await file.read(buffer, 0, buffer.length, 0)
+  console.log(buffer.subarray(0, bytesRead))
+} finally {
+  await file.close()
+}
+```
+
+`readFile()` continua útil quando quero o arquivo inteiro. Quando só preciso de um trecho, uma leitura com posição resolve. Para processar um arquivo grande por partes, uso uma stream de leitura.
+
+[Documentação do módulo fs](https://nodejs.org/api/fs.html)

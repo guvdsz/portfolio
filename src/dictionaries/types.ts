@@ -1,0 +1,22 @@
+export type ParagraphPart = string | { text: string; href: string }
+
+export interface Dictionary {
+  navigation: {
+    experience: string
+    notes: string
+    primary: string
+    language: string
+    theme: string
+    darkMode: string
+    skip: string
+  }
+  home: {
+    paragraphs: ParagraphPart[][]
+    description: string
+  }
+  notes: {
+    title: string
+    description: string
+    all: string
+  }
+}

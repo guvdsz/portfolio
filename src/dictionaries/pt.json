@@ -1,0 +1,32 @@
+{
+  "navigation": {
+    "experience": "Experiência",
+    "notes": "Notas",
+    "primary": "Navegação principal",
+    "language": "Idioma",
+    "theme": "Tema",
+    "darkMode": "Tema escuro",
+    "skip": "Ir para o conteúdo"
+  },
+  "home": {
+    "paragraphs": [
+      [
+        "Sou desenvolvedor de software do interior da Bahia. Na EloGroup, fui de estagiário em engenharia de software a Forward Deployed Engineer. Trabalhei com JavaScript em sistemas para o setor público, do levantamento de requisitos com clientes à implementação de regras de negócio, integrações e migração de dados."
+      ],
+      [
+        "Fora do trabalho, escrevo sobre o que descubro estudando ",
+        {
+          "text": "Node.js",
+          "href": "https://nodejs.org/"
+        },
+        ". Ultimamente, tenho explorado como os dados passam por arquivos, streams e conexões TCP."
+      ]
+    ],
+    "description": "Gustavo Viana, desenvolvedor de software da Bahia. Experiência com sistemas para o setor público e notas técnicas sobre Node.js."
+  },
+  "notes": {
+    "title": "Notas",
+    "description": "Notas sobre o que aprendo ao trabalhar com arquivos, streams e conexões no Node.js.",
+    "all": "Todas as notas"
+  }
+}

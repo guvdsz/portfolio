@@ -1,0 +1,32 @@
+{
+  "navigation": {
+    "experience": "Experience",
+    "notes": "Notes",
+    "primary": "Main navigation",
+    "language": "Language",
+    "theme": "Theme",
+    "darkMode": "Theme (dark mode)",
+    "skip": "Skip to content"
+  },
+  "home": {
+    "paragraphs": [
+      [
+        "I’m a software developer from Bahia, Brazil. At EloGroup, I went from software engineering intern to Forward Deployed Engineer. I worked on JavaScript systems for the public sector, from gathering requirements with clients to implementing business rules, integrating services, and migrating data."
+      ],
+      [
+        "Outside work, I write about what I learn from digging into ",
+        {
+          "text": "Node.js",
+          "href": "https://nodejs.org/"
+        },
+        ". Lately, I’ve been exploring how data moves through files, streams, and TCP connections."
+      ]
+    ],
+    "description": "Gustavo Viana, software developer from Bahia, Brazil. Public-sector software experience and technical notes on Node.js."
+  },
+  "notes": {
+    "title": "Writing",
+    "description": "Notes on what I learn from working with files, streams, and connections in Node.js.",
+    "all": "All notes"
+  }
+}

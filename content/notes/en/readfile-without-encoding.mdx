@@ -1,0 +1,33 @@
+When I started using the Node.js `fs` module, I treated file reads as operations that always returned text. The difference became clear when I took the `'utf8'` argument out of the call.
+
+## Bytes first
+
+```js
+import { readFile } from 'node:fs/promises'
+
+const bytes = await readFile('README.md')
+const text = await readFile('README.md', 'utf8')
+```
+
+The first read returns a `Buffer`. It holds the file’s bytes, which I can pass to code that expects binary data, such as a hashing function. The second read interprets those bytes as UTF-8 and returns a string. If I already have the buffer, I can decode it later with `bytes.toString('utf8')`.
+
+## What changes when I open the file
+
+`fs.promises.open()` returns a `FileHandle`. It wraps an operating system file descriptor and lets me do things like read from a specific offset. When I open the file explicitly, I close it when I’m done, even if a read fails.
+
+```js
+import { open } from 'node:fs/promises'
+
+const file = await open('README.md', 'r')
+try {
+  const buffer = Buffer.alloc(32)
+  const { bytesRead } = await file.read(buffer, 0, buffer.length, 0)
+  console.log(buffer.subarray(0, bytesRead))
+} finally {
+  await file.close()
+}
+```
+
+`readFile()` is handy when I need the whole file. If I only need a slice, I can read at an offset. For processing a large file in chunks, I use a readable stream.
+
+[Node.js file system documentation](https://nodejs.org/api/fs.html)

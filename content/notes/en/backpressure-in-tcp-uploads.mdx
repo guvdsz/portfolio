@@ -1,0 +1,22 @@
+In a small `node:net` experiment, I had a client send a filename and size before sending the file bytes. On the server, the socket could deliver data faster than the writable stream could put it on disk. That was when backpressure became something I had to handle in my own code.
+
+## From the network to disk
+
+`file.write(chunk)` returns a boolean. When it returns `false`, the chunk has already been accepted and the writable is asking me to wait before sending the next one. I pause reads from the socket and resume them when the file stream emits `drain`.
+
+```js
+function writeChunk(socket, file, chunk) {
+  if (!file.write(chunk)) {
+    socket.pause()
+    file.once('drain', () => socket.resume())
+  }
+}
+```
+
+This snippet handles flow control while writing the body. The full transfer also has to handle errors, close resources, and check that the number of bytes received matches the advertised size.
+
+## The protocol defines the boundaries
+
+TCP delivers a stream of bytes. A single `data` event might hold half a header or a complete header plus the start of the file. The parser needs to retain any incomplete header and forward only bytes that belong to the body. Once framing is handled, `pipeline()` can coordinate flow and propagate errors between streams.
+
+[Node.js stream documentation](https://nodejs.org/api/stream.html)
