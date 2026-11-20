@@ -5,7 +5,11 @@ import { defaultLocale } from './src/lib/i18n'
 const config: NextConfig = {
   poweredByHeader: false,
   async redirects() {
-    return [{ source: '/', destination: '/' + defaultLocale, permanent: true }]
+    return [{
+      source: '/',
+      destination: '/' + defaultLocale,
+      permanent: process.env.NODE_ENV !== 'development',
+    }]
   },
 }
 

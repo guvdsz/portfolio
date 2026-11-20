@@ -21,11 +21,11 @@ export const experience: readonly Employer[] = [
         copy: {
           pt: {
             title: 'Forward Deployed Engineer',
-            description: 'Fiz a especificação técnica, desenvolvi funcionalidades e migrei dados na modernização do sistema de plano de saúde de uma instituição pública. Traduzi regras de um sistema com mais de uma década de operação em formulários, automações e integrações na plataforma SYDLE ONE.',
+            description: 'Desenvolvo soluções em JavaScript na plataforma SYDLE ONE e levanto e refino requisitos diretamente com clientes. Implemento regras de negócio, formulários dinâmicos, automações BPM e integrações com APIs e serviços externos. Na modernização do sistema de plano de saúde de uma instituição pública, trabalho na especificação técnica, no desenvolvimento e na migração de dados de um legado com mais de dez anos de operação.',
           },
           en: {
             title: 'Forward Deployed Engineer',
-            description: 'I wrote technical specifications, implemented features, and migrated data to modernize a public institution’s health plan system. I translated rules from a system that had been in use for more than a decade into forms, automations, and integrations on SYDLE ONE.',
+            description: 'I build JavaScript solutions on SYDLE ONE and gather and refine requirements directly with clients. I implement business rules, dynamic forms, BPM automations, and integrations with external APIs and services. I work on technical specifications, development, and data migration to modernize a public institution’s health plan system, replacing a legacy system with over ten years of operation.',
           },
         },
       },
@@ -35,11 +35,11 @@ export const experience: readonly Employer[] = [
         copy: {
           pt: {
             title: 'Software Engineer I',
-            description: 'Desenvolvi regras de negócio e integrações com serviços governamentais. Contribuí para a arquitetura e a implementação de uma plataforma interfederativa de atendimento digital ao contribuinte e conformidade fiscal no contexto da Reforma Tributária.',
+            description: 'Desenvolvi back-end e regras de negócio em JavaScript na SYDLE ONE para sistemas do setor público nas áreas financeira, de saúde e de atendimento. Implementei validações, comportamentos orientados a eventos, scripts de automação e integrações com APIs governamentais. Atuei em uma plataforma interfederativa nacional de atendimento digital ao contribuinte e conformidade fiscal para os novos impostos sobre consumo da Reforma Tributária.',
           },
           en: {
             title: 'Software Engineer I',
-            description: 'I implemented business rules and integrated government services. I contributed to the architecture and implementation of a platform serving taxpayers across levels of government and supporting compliance under Brazil’s consumption tax reform.',
+            description: 'I developed back-end logic and business rules in JavaScript on SYDLE ONE for public-sector systems in finance, healthcare, and citizen services. I built validations, event-driven behaviors, automation scripts, and government API integrations. I worked on a nationwide intergovernmental platform for digital taxpayer services and compliance with Brazil’s new consumption taxes under the Tax Reform.',
           },
         },
       },
@@ -49,11 +49,11 @@ export const experience: readonly Employer[] = [
         copy: {
           pt: {
             title: 'Estagiário em Engenharia de Software',
-            description: 'Ajudei a especificar e desenvolver uma plataforma de planejamento estratégico para um órgão estatal, com métricas, objetivos, tarefas e acompanhamento de metas entre setores. Trabalhei com consultas em Elasticsearch e recebi dois reconhecimentos formais pelo desempenho nesse trabalho.',
+            description: 'Trabalhei com JavaScript, consultas avançadas e manipulação de dados em Elasticsearch, integrações de Web Services e scripts de automação. Participei do desenvolvimento de um sistema de planejamento estratégico para um órgão estatal, com métricas, objetivos, tarefas e metas, do levantamento de requisitos à homologação e ao treinamento de usuários. Recebi reconhecimentos formais de performance por conduta excepcional e amplitude de atuação.',
           },
           en: {
             title: 'Software Engineering Intern',
-            description: 'I helped specify and build a strategic planning platform for a government agency, with metrics, objectives, tasks, and progress tracking across departments. I worked with Elasticsearch queries and received two formal commendations for my work on the platform.',
+            description: 'I worked with JavaScript, advanced Elasticsearch queries and data manipulation, Web Service integrations, and automation scripts. I helped develop a strategic planning system for a state agency, covering metrics, objectives, tasks, and goals, from requirements gathering to user acceptance testing and end-user training. I received formal performance recognitions for exceptional conduct and breadth of contribution.',
           },
         },
       },
@@ -68,11 +68,11 @@ export const experience: readonly Employer[] = [
         copy: {
           pt: {
             title: 'Líder de semestre',
-            description: 'Representei a turma junto aos professores e ajudei colegas com projetos e na adaptação ao curso.',
+            description: 'Atuei como ponte entre alunos e professores e ofereci apoio técnico e acadêmico aos colegas.',
           },
           en: {
             title: 'Student Representative',
-            description: 'I represented my cohort in discussions with instructors and helped classmates with projects and getting settled into the program.',
+            description: 'I served as a liaison between students and faculty and provided technical and academic support to classmates.',
           },
         },
       },
@@ -101,11 +101,11 @@ export const experience: readonly Employer[] = [
         copy: {
           pt: {
             title: 'Desenvolvedor front-end freelancer, web e mobile',
-            description: 'Trabalhei no desenvolvimento de um aplicativo web e mobile para uma startup canadense, usando React Native e Expo. Implementei autenticação, navegação e formulários e integrei o app à API do backend. Colaborei remotamente com uma equipe internacional e alinhei as demandas em inglês com o Product Owner.',
+            description: 'Desenvolvi um aplicativo mobile com suporte à web para uma startup canadense, usando TypeScript, React Native e Expo. Implementei autenticação, navegação, gerenciamento de estado e integração com a API backend. Criei formulários com React Hook Form e Yup e estilizei componentes com Tamagui e Styled Components. Colaborei com uma equipe internacional em reuniões diárias e de alinhamento em inglês com o Product Owner e outros stakeholders.',
           },
           en: {
             title: 'Freelance Front-End Developer, Web and Mobile',
-            description: 'I worked on a web and mobile app for a Canadian startup using React Native and Expo. I implemented authentication, navigation, and forms and integrated the app with its backend API. I collaborated remotely with an international team and discussed requirements with the Product Owner in English.',
+            description: 'I built a mobile app with web support for a Canadian startup using TypeScript, React Native, and Expo. I implemented authentication, navigation, state management, and backend API integration. I built forms with React Hook Form and Yup and styled components with Tamagui and Styled Components. I collaborated with an international team in daily stand-ups and alignment meetings in English with the Product Owner and other stakeholders.',
           },
         },
       },

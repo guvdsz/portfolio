@@ -14,18 +14,21 @@
     "title": "Sobre mim",
     "paragraphs": [
       [
-        "Sou engenheiro de software e gosto de trabalhar com backend, especialmente com JavaScript, TypeScript e ",
+        "Sou engenheiro de software com foco em backend, usando TypeScript e ",
         {
           "text": "Node.js",
           "href": "https://nodejs.org/"
         },
-        ". Tenho experiência com integrações, regras de negócio e migração de dados em sistemas para o setor público."
+        " para desenvolver APIs REST, integrar sistemas e modelar dados em SQL."
+      ],
+      [
+        "Na EloGroup, desenvolvo sistemas para o setor público com JavaScript na plataforma SYDLE ONE. Trabalho com regras de negócio, automação de processos BPM, consultas em Elasticsearch e migração de dados legados nas áreas de saúde, finanças e atendimento ao contribuinte."
       ],
       [
         "Tenho estudado arquitetura de software, design systems e conceitos de baixo nível em JavaScript e Node.js."
       ]
     ],
-    "description": "Gustavo Viana, engenheiro de software com foco em backend. Experiência com sistemas para o setor público e notas técnicas sobre Node.js."
+    "description": "Gustavo Viana, engenheiro de software com foco em backend, Node.js e TypeScript. APIs REST, integrações entre sistemas e modelagem de dados SQL."
   },
   "projects": {
     "title": "Projetos",

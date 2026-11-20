@@ -14,18 +14,21 @@
     "title": "About me",
     "paragraphs": [
       [
-        "I’m a software engineer who enjoys working on the backend, especially with JavaScript, TypeScript, and ",
+        "I’m a software engineer focused on backend development, using TypeScript and ",
         {
           "text": "Node.js",
           "href": "https://nodejs.org/"
         },
-        ". I’ve worked on service integrations, business rules, and data migrations for public-sector systems."
+        " to build REST APIs, integrate systems, and model data in SQL."
+      ],
+      [
+        "At EloGroup, I build public-sector systems with JavaScript on the SYDLE ONE platform. I work on business rules, BPM process automation, Elasticsearch queries, and legacy data migration across healthcare, finance, and taxpayer services."
       ],
       [
         "I’ve been studying software architecture, design systems, and the internals of JavaScript and Node.js."
       ]
     ],
-    "description": "Gustavo Viana, a software engineer focused on backend work. Public-sector software experience and technical notes on Node.js."
+    "description": "Gustavo Viana, a software engineer focused on backend development, Node.js, and TypeScript. REST APIs, system integrations, and SQL data modeling."
   },
   "projects": {
     "title": "Projects",
